@@ -1,0 +1,102 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Welcome To My Page</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            <figure class="circle-bg">
+            <img src="{% static 'images/ken.jpg' %}" alt="Image" class="img-fluid">
+            </figure>
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3 class="h3 mb-4 text-black">SOFTWARE ENGINEER</h3>
+              <p>I am <strong>Kaloki Kennedy Musango</strong> , a professional <strong>Software Engineer</strong>.I am a <strong>Bachelor Degree</strong> student pursuing <strong>Information Technology (IT)</strong> at <strong>South Eastern Kenya University</strong>. Very Focused on solving real World Problems, Changing the World and making World a better place. I am also <strong>Computer World</strong> Co-Founder and the CEO.</p>
+              
+            </div>
+            <p><a href="https://github.com/KALOKIHASTROH/" class="btn btn-primary mr-2 mb-2">MY GITHUB ACCOUNT</a></p>
+  
+            
+              
+            <div class="mb-4">
+              <ul class="list-unstyled ul-check success">
+                <li>Full Stack Web Developer</li>
+                <li>Artficial Intelligence|Machine Learning Expert</li>
+                <li>Desktop and Android Applications</li>
+                <li>Cyber Security Expert</li>
+              </ul>
+              
+            </div>
+  
+            
+            
+          </div>
+        </div>
+      </div>  
+    </div>
+
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'images/ken1.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Astroh Famous</h5>
+            <p class="card-text">The system adminstrators and the group coordinator of the astroh cyber and computing services. Am a<strong>TEAM MANAGER</strong> and the <b><em>WEB DESIGNER</em></b></p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 0 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'images/ken3.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">kaloki Astroh</h5>
+            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="{% static 'images/ken4.jpg' %}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">beauty2</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Last updated 3 mins ago</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="ft">
+    <div class="nav">
+  <a title="portfolio" href="review.html" accesskey="U">up</a></div>
+  </div>
+  </div>
+  <br>
+
+{% for Po in Port %}
+<p>{{ Po.content}}</p>
+<p>{{ Po.date}}</p>
+
+{% endfor %}
+ 
+
+
+{% endblock %}

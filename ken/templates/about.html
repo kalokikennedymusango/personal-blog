@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+    <div class="site-section cta-big-image" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">About Astroh Cyber and Electronics</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+            
+            <div class="mb-3">
+              <ul class="list-unstyled ul-check success">
+                <h2>AREA WE HAVE APECIALIZED</h2>
+                <li>We are Full Stack Web Developer</li>
+                <li>We are Artficial Intelligence|Machine Learning Expert</li>
+                <li>We are Desktop and Android Applications makers</li>
+                <li>We are Cyber Security Expert</li>
+              </ul>
+              <h3>Important Contacts</h3>
+              <P>To get help incase of system failure, problem with loading the page or any other kind os vulnarabilitiee please reach the team behind the project</P>
+              <P style="color: black;">And be asured of getting a resting solution</P>
+                    <b style="color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"><em>For calls and text</em></b> <br>
+                    <b><em>Saf</em></b>  0797123448 <br>
+                      <b><em>Saf</em></b>  0702498590 <br>
+                        <b><em> Airtel</em></b>  0732494197 <br>
+            </div>
+
+          </div>
+          <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+            <div class="mb-4">
+              <h3 class="h3 mb-4 text-black">About the cyber</h3>
+              <p>This is a <strong>Digital and Computerised </strong> cyber <strong>It meets all the ACK requiremnts of a cyber</strong>.we offer <strong>Computing services</strong> and certify the learner <strong>we are pervassive in networking</strong> and <strong>we are IT experts </strong>. Very Focused on solving real World Problems, Changing the World and making World a better place. We are also <strong>Computer World< Consultants/strong> Co-Founder and the CEO.</p>
+              
+            </div>
+            <h2>Find us on</h2>
+            <p><a href="https://github.com/KALOKIHASTROH/" class="btn btn-success mr-2 mb-2"> GITHUB ACCOUNT</a></p>
+            <p><a href="https://github.com/KALOKIHASTROH/" class="btn btn-success mr-2 mb-2"> FACEBOOK ACCOUNT</a></p>
+            <p><a href="https://github.com/KALOKIHASTROH/" class="btn btn-success mr-2 mb-2"> TWITTER ACCOUNT</a></p>
+  
+            
+              
+           
+  
+            
+            
+          </div>
+        </div>
+      </div>  
+    </div>
+ 
+
+    {% for Abt in About %}
+    <p>{{ Abt.content}}</p>
+    <p>{{ Upd.date}}</p>
+    
+    {% endfor %}
+    
+    {% endblock %}
+
+   
+ 
+
+

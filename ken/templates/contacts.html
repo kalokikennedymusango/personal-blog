@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+
+<h2>New Contacts</h2>
+<form method="POST" class="POST-form">
+  {% csrf_token %}
+  {{ form|crispy }}
+  <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+<h1><em><marquee>TO REACH US FOLLOW THE HOTLINES BELOW</marquee></em></h1>
+<h2>CONTACTS</h2> <hr>
+<div style="text-align: left; margin-left: 5%;">
+0797123448_KALOKI ASTROH<BR>
+0702498590_KENNEDY<br>
+
+<h3>OUR ADDRESS</h3>
+P.O BOX 1266-90200 <br>
+LAWSON, KITUI
+</div>
+
+
+<br>
+{% for Con in Conta %}
+<p>{{ Con.title}}</p>
+<p>{{ Con.content}}</p>
+<p>{{ Con.date}}</p>
+
+{% endfor %}
+
+{% endblock %}

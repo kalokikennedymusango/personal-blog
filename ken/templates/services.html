@@ -1,0 +1,141 @@
+{% extends 'base.html' %}
+
+{% load staticfiles%}
+{% block content %}
+
+
+<body id="img">
+   
+    <div style="margin-top: 100px;margin-bottom: 100px;margin-left: 400px;margin-right: 300px;">
+    <hr>
+   <h1> <b><em>Welcome to our services</em></b></h1>
+   <hr>
+   <h2>Feel most welcome, we honor you as our customer</h2>
+   <hr>
+   <p>we offer the following services</p>
+   <hr>
+   </div>
+
+
+   <h2>New Post</h2>
+<form method="POST" class="POST-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-outline-success">Save</button>
+</form>
+
+   
+  
+   <div style="height: 60px;width: 80px;"></div>
+   <table style= border="5" cellspacing="5px" cellpadding="5px" class="table caption-top">
+        <caption>List of services we offer at Astroh cyber and electronics</caption>
+        <thead >
+          <tr style="background-color: lightcyan;color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            <th style="background-color: lightcyan;color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" scope="col">#</th>
+            <th style="background-color: lightcyan;color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" scope="col">Services</th>
+            <th style="background-color: lightcyan;color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" scope="col">Cost</th>
+            <th style="background-color: lightcyan;color: green;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" scope="col">offer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">1</th>
+            <td>Scanning</td>
+            <td>Ksh.20 @page</td>
+            <td>10+ @ Ksh10</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">2</th>
+            <td>Printing & photocoping</td>
+            <td>Ksh.5 @page<br> ksh.3</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">3</th>
+            <td>photo and passport</td>
+            <td>@ Ksh25</td>
+            <td>More than 20</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">4</th>
+            <td>Certificate Printing</td>
+            <td>Ksh.500 @page</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">5</th>
+            <td>Package coathing and trianing</td>
+            <td>ksh.500</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">6</th>
+            <td>KRA Nill Return</td>
+            <td>Ksh. 50</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">7</th>
+            <td>KRA for employed</td>
+            <td> Ksh. 100</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">8</th>
+            <td>KRA email Changing</td>
+            <td>ksh. 100</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">9</th>
+            <td>KRA Waiver</td>
+            <td>ksh. 100</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">10</th>
+            <td>KRA application en printing</td>
+            <td>ksh. 150</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">11</th>
+            <td>KRA pin reset en compliance</td>
+            <td>ksh. 150</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">12</th>
+            <td>type setting</td>
+            <td>ksh.200</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">13</th>
+            <td>lamination</td>
+            <td>ksh 50</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">14</th>
+            <td>binding</td>
+            <td>ksh.50</td>
+            <td>No offer</td>
+          </tr>
+          <tr>
+            <th style="background-color: green;color: whitesmoke;" scope="row">15</th>
+            <td>electronic and other stuffs</td>
+            <td>Fixed</td>
+            <td>No offer</td>
+          </tr>
+
+        </tbody>
+      </table>
+<br>
+{% for Ser in Services %}
+<p>{{ Ser.content}}</p>
+<p>{{ Ser.date}}</p>
+
+{% endfor %}
+
+{% endblock %}

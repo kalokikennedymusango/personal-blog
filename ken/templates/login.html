@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <!-- Custom styles for this template -->
+  <link href="jumbotron.css" rel="stylesheet">
+</head>
+<body style="background-color: gray;">
+<div style="margin-left: 500px; border-radius: 500px; margin-right: 500px; margin-top: 30px; margin-bottom: 80px;">
+<form style="border-style: solid;text-align: center; border-color:skyblue;background:green;border-style: double; color: whitesmoke;" class="form-inline">
+<hr>
+<img src="images/IMG20201022095858.jpg" height="120px" width="120px"><br><hr><vr>
+
+<label style="border-right: yellowgreen; text-align: right; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="sr-only" for="inlineFormInputName2">First Name</label>
+<input style="text-align: center; border-bottom-left-radius: 200px;border-bottom-right-radius: 200px;" type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="1st name">
+
+<label  style="border-right: yellowgreen; font-family: Verdana, Geneva, Tahoma, sans-serif;" class="sr-only" for="inlineFormInputName2">Second Name</label>
+<input style="text-align: center;border-bottom-left-radius: 200px;border-bottom-right-radius: 200px;" type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="2nd name">
+
+<label  style="border-right: yellowgreen; font-family: Verdana, Geneva, Tahoma, sans-serif; " class="sr-only" for="inlineFormInputGroupUsername2">Username</label>
+<div style="text-align: center; " class="input-group mb-2 mr-sm-2">
+  <div style="text-align: center;" class="input-group-prepend">
+    <div style="text-align: center;border-bottom-left-radius: 200px;" class="input-group-text">U_Name</div>
+  </div>
+  <input  style="border-right: yellowgreen;   border-bottom-right-radius: 200px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" type="text" class="form-control" id="inlineFormInputGroupUsername2" placeholder="Username">
+</div>
+<input style="border-bottom-left-radius: 200px;border-bottom-right-radius: 200px; text-align: center;" type="password" id="password" placeholder="password" ></input>
+
+<div style="text-align: left;" class="form-check mb-2 mr-sm-2">
+  <input  style="border-right: yellowgreen; font-family: Verdana, Geneva, Tahoma, sans-serif; text-align: center;" class="form-check-input" type="checkbox" id="inlineFormCheck">
+  <label  style="border-right: yellowgreen; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align: center;" class="form-check-label" for="inlineFormCheck">
+  </label>
+</div>
+<button type="reset" class="btn btn-success mb-2">Reset</button>
+<button type="submit" class="btn btn-primary mb-2">Create</button>
+</form>
+
+{% endblock %}

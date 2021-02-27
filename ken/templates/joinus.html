@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<h2>New Post</h2>
+<form method="POST" enctype="multipart/form-data" class="POST-form">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-outline-success">Save</button>
+</form> 
+
+
+
+<div class="site-section cta-big-image" id="about-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-12 text-center" data-aos="fade">
+          <h2 class="section-title mb-3">Feel Free To Join Us</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+          <figure class="circle-bg">
+            <h1><b>WELCOME NOTE</b></h1>
+         <P><em>Having you makes our trust issues grow as we will periodically request for ratings from our customers and allow users to express the needs for change in some of the product, this will make us reach the 100% transition of our services and product order. Feel welcomed when you log in. THANK YOU for choosing us</em></P>>
+          </figure>
+        </div>
+        <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+          <div class="mb-4">
+            <h3 class="h3 mb-4 text-black">Astroh Cyber And Computing Services</h3>
+            <p>Is a <strong>Online Website That is used for various task including</strong> , registration done by <strong>CREATING AND OPENNING ACCOUNT </strong>. get all the computing services<strong>Bachelor Degree</strong> student pursuing <strong>Information Technology (IT)</strong> at <strong>South Eastern Kenya University</strong>. Very Focused on solving real World Problems, Changing the World and making World a better place. I am also <strong>Computer World</strong> Co-Founder and the CEO.</p>
+            
+          </div>
+          <p><a href="https://github.com/KALOKIHASTROH/" class="btn btn-primary mr-2 mb-2">MY GITHUB ACCOUNT</a></p>
+
+          
+            
+          <div class="mb-4">
+            <ul class="list-unstyled ul-check success">
+              <li>we allow you to order and we deliver</li>
+              <li>you can access our new product and rush to buy before the stock collapses| you can order if availiable</li>
+              <li>For good and consisted customers we offer products with a discounted cost that we define monthly</li>
+              <li><strong><em>Meet the Security Expert team and other cyber matters</em></strong> </li>
+            </ul>
+            
+          </div>
+
+          
+          
+        </div>
+      </div>
+    </div>  
+  </div>
+
+  <div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+      <div style="background: red;" class="card h-100">
+        <div style="background-color: green;" class="card-body">
+          <h5 style="color: orange;" class="card-title">MISSION</h5>
+          <p style="color: whitesmoke;" class="card-text">We wish to enrich our customers by working on a common goal of protecting their data and improving their business standards. we meet this by ensuring our services are much more good and buyer able. The services are<strong>PRINTING, SCANNING, POTOCOPING ETC</strong>we are also delighted to see you the customer trade with us by having an electronic that is still accessible. and we offer<b><em>ALL ELECTRONIC ACCESSORIES ie PHONE $ LAPTOP ACCESSORIES, CHARGERS, FALSH HF RADIOS etc </em></b></p>
+        </div>
+        <div style="background: royalblue;" class="card-footer">
+          <small style="background: orange; color: whitesmoke;" class="text-muted">Last updated 0 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+       
+        <div class="card-body">
+          <h5 class="card-title">VISION</h5>
+          <p class="card-text"> To enlighten the society by being Transparent, Honest and Clear to our customers</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 1 mins ago</small>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card h-100">
+    
+        <div class="card-body">
+          <h5 class="card-title">Our Charisma</h5>
+          <p class="card-text">We are goal oriented to enable our customers have a good ambition and rate us to their maximum of satisfaction. We are also desciplined in our staff-customer relation, always feel welcomed.</p>
+        </div>
+        <div class="card-footer">
+          <small class="text-muted">Last updated 3 mins ago</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+ {% for Upds in JJoin %}
+
+
+<p>{{ Upds.title}}</p>
+<p>{{ Upds.content}}</p>
+<p>{{ Upds.date}}</p>
+
+{% endfor %} 
+
+{% endblock %}
