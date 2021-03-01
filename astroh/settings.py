@@ -120,13 +120,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-
- DEBUG:
-     MEDIA_URL = '/media/'
-     STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
-     MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
-     STATICFILES_DIR = (
-         os.path.join(os.path.dirname(BASE_DIR), "static"),
-     )
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+if DEBUG:
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static", "media")
+    STATICFILES_DIR = (
+        os.path.join(os.path.dirname(BASE_DIR), "static"),
+    )
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
